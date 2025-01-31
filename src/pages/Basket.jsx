@@ -10,18 +10,16 @@ const Basket = () => {
     <>
     <div>
       <Navbars />
-      <h3>Your Basket</h3>
-      <p>Total: $ {total}</p>
+      <h3 className='text-center my-5 text-warning fw-bold'>Your Basket</h3>
+      
       
     </div>
     <div>
-    {products.length === 0 ? (
-          <p>Your basket is empty!</p>
-        ) : (
+     {
           products.map((product, i) => (
             <BasketProduct key={i} item={product} />
           ))
-        )}
+        }
     </div>
     </>
   );

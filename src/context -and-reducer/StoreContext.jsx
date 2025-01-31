@@ -1,10 +1,10 @@
 import { createContext, useReducer } from "react";
 import reducer, { initialState } from "./reducer";
-
-export const StoreContext = createContext();
+import { storeData } from "../Data";
+export const StoreContext = createContext(null);
 
  export const StoreProvider = ({ children }) => {
-  const [state, dispatch] = useReducer(reducer, initialState);
+  const [state, dispatch] = useReducer(reducer,{...initialState, products:storeData});
 
   const addToBasket = (product) => {
     const updatedBasket = [...state.products, product]; 
@@ -18,7 +18,7 @@ export const StoreContext = createContext();
 
   const removeFromBasket = (product) => {
     const updatedBasket = state.products.filter(
-      (currentProduct) => currentProduct.name !== product.name
+      (currentProduct) => currentProduct.id !== product.id
     );
 
     updatedprice(updatedBasket);

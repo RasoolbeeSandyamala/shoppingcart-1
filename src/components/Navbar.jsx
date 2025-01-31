@@ -15,7 +15,7 @@ const Navbars = () => {
         <Navbar.Collapse id="basic-navbar-nav" >
           <Nav className="m-auto fs-3">
             <Nav.Link className='text-warning  ms-5 ' href="/">Home</Nav.Link>
-            <Nav.Link className='text-warning  ms-5' href="/basket">Basket <span>{products.length}</span></Nav.Link>
+            <Nav.Link className='text-warning  ms-5' href="/basket">Basket<span>{products.length}</span> </Nav.Link>
             </Nav>
         </Navbar.Collapse>
       </Container>

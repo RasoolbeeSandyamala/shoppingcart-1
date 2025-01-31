@@ -9,11 +9,14 @@ const BasketProduct = ({item}) => {
   }
   return (
     <>
-    <div>
-      <img src={item.thumbnail} alt="" />
-     <p>{item.name}</p>
+    <div className=" border border-1 shadow container
+     d-flex w-50 my-3 p-3 gap-5 justify-content-evenly flex-wrap">
+      <img src={item.thumbnail} alt="" width={'300px'} />
+      <div className='m-auto fw-bold fs-3'>
+      <p>{item.title}</p>
       <p>${item.price.toFixed(2)}</p>
-      <button className='btn' onClick={handleRemove} >Remove</button>
+      <button className='btn btn-danger' onClick={()=>{handleRemove()}} >Remove</button>
+      </div>
       </div>
     </>
   );

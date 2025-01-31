@@ -15,6 +15,7 @@ const Product = ({item}) => {
        <p className=" text-center text-warning fs-3 fw-bold"> ${item.price}</p>
        <button className="btn btn-success" onClick={handleAdd} >Add to basket</button>
       </div>
+      <div></div>
     </>
   );
 }
